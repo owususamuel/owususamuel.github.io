@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: rgba(115, 115, 115, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(115, 115, 115, 0.5);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+}
+
+table tbody tr:last-child {
+  border-bottom: none;
+}
+
