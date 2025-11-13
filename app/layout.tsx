@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Samuel Owusu | Machine Learning Engineer & Software Developer',
-  description: 'Portfolio of Samuel Owusu, a Machine Learning Engineer and Software Developer based in Accra, Ghana. Specializing in ML, AI, web development, and mobile app development.',
+  description: 'Portfolio of Samuel Owusu, a Machine Learning Engineer and Software Developer based in Aberdeen, Scotland, UK. Specializing in ML, AI, web development, and mobile app development.',
   keywords: ['Machine Learning', 'AI', 'Software Developer', 'Web Development', 'Android Development', 'Samuel Owusu', 'Ghana'],
   authors: [{ name: 'Samuel Owusu' }],
   creator: 'Samuel Owusu',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://owususamuel.github.io',
     title: 'Samuel Owusu | Machine Learning Engineer',
-    description: 'Portfolio of Samuel Owusu, a Machine Learning Engineer based in Accra, Ghana.',
+    description: 'Portfolio of Samuel Owusu, a Machine Learning Engineer based in Aberdeen, Scotland, UK.',
     siteName: 'Samuel Owusu Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Samuel Owusu | Machine Learning Engineer',
-    description: 'Portfolio of Samuel Owusu, a Machine Learning Engineer based in Accra, Ghana.',
-    creator: '@owusudev',
+    description: 'Portfolio of Samuel Owusu, a Machine Learning Engineer based in Aberdeen, Scotland, UK.',
+    creator: '@owusu_rg',
   },
 };
 
