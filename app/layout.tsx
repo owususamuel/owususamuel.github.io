@@ -1,34 +1,60 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import { Anybody, Martian_Mono, Newsreader } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from '@/components/ThemeProvider';
 
-const inter = Inter({ 
-  subsets: ['latin'], 
-  variable: '--font-inter',
+const anybody = Anybody({
+  subsets: ['latin'],
+  axes: ['wdth'],
+  variable: '--font-anybody',
   display: 'swap',
 });
 
+const martianMono = Martian_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-martian',
+  display: 'swap',
+});
+
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  axes: ['opsz'],
+  variable: '--font-newsreader',
+  display: 'swap',
+});
+
+const description =
+  'Samuel Owusu is a machine learning engineer and software developer working on speech, language and AI agents.';
+
 export const metadata: Metadata = {
-  title: 'Samuel Owusu | Machine Learning Engineer & Software Developer',
-  description: 'Portfolio of Samuel Owusu, a Machine Learning Engineer and Software Developer based in Aberdeen, Scotland, UK. Specializing in ML, AI, web development, and mobile app development.',
-  keywords: ['Machine Learning', 'AI', 'Software Developer', 'Web Development', 'Android Development', 'Samuel Owusu', 'Ghana'],
+  metadataBase: new URL('https://owususamuel.github.io'),
+  title: 'Samuel Owusu',
+  description,
   authors: [{ name: 'Samuel Owusu' }],
   creator: 'Samuel Owusu',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://owususamuel.github.io',
-    title: 'Samuel Owusu | Machine Learning Engineer',
-    description: 'Portfolio of Samuel Owusu, a Machine Learning Engineer based in Aberdeen, Scotland, UK.',
-    siteName: 'Samuel Owusu Portfolio',
+    url: '/',
+    title: 'Samuel Owusu',
+    description: 'Machine learning engineer and software developer.',
+    siteName: 'Samuel Owusu',
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Samuel Owusu | Machine Learning Engineer',
-    description: 'Portfolio of Samuel Owusu, a Machine Learning Engineer based in Aberdeen, Scotland, UK.',
+    card: 'summary',
+    title: 'Samuel Owusu',
+    description: 'Machine learning engineer and software developer.',
     creator: '@owusu_rg',
   },
+};
+
+export const viewport: Viewport = {
+  viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#EAECE7' },
+    { media: '(prefers-color-scheme: dark)', color: '#0D0F12' },
+  ],
 };
 
 export default function RootLayout({
@@ -37,12 +63,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <ThemeProvider defaultTheme="dark" storageKey="theme">
-          {children}
-        </ThemeProvider>
-      </body>
+    <html lang="en" className={`${anybody.variable} ${martianMono.variable} ${newsreader.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
